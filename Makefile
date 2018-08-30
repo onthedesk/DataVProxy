@@ -15,10 +15,9 @@ nodejs_env:
 	@if [ -d ~/src ]; then echo ""; else mkdir ~/src; fi;
 	@cd ~/src ; wget https://nodejs.org/dist/v8.11.4/node-v8.11.4-linux-x64.tar.xz
 	@if [ -d ~/src ]; then echo ""; else mkdir ~/src; fi;
-	@cd ~/src ; xz -d node-v8.11.4-linux-x64.tar.xz
 	@cd ~/src ; tar xvJf node-v8.11.4-linux-x64.tar.xz
-	@cd ~/bin ; ln -s ../src/node-v8.11.4-linux-x64.tar.xz/bin/node node
-	@cd ~/bin ; ln -s ../src/node-v8.11.4-linux-x64.tar.xz/bin/npm npm
+	@cd ~/bin ; ln -s ../src/node-v8.11.4-linux-x64/bin/node node
+	@cd ~/bin ; ln -s ../src/node-v8.11.4-linux-x64/bin/npm npm
 	@npm config set prefix ~
 	@npm install -g cnpm --registry=https://registry.npm.taobao.org
 
