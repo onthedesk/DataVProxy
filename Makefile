@@ -1,8 +1,8 @@
 install: pre_env start
 
 clean:
-	@if [ -a ~/src/node-v8.11.4.tar.gz ]; then rm ~/src/node-v8.11.4.tar.gz; fi;
-	@if [ -a ~/src/node-v8.11.4.tar.gz ]; then rm ~/src/node-v8.11.4.tar.gz; fi;
+	@if [ -a ~/src/node-v8.11.4-linux-x64.tar.xz ]; then rm ~/src/node-v8.11.4-linux-x64.tar.xz; fi;
+	@if [ -a ~/src/node-v8.11.4-linux-x64.tar.xz ]; then rm ~/src/node-v8.11.4-linux-x64.tar.xz; fi;
 	@if [ -a ~/bin/node ]; then rm ~/bin/node; fi;
 	@if [ -a ~/bin/npm ]; then rm ~/bin/npm; fi;
 	@if [ -a ~/bin/pm2 ]; then rm ~/bin/pm2; fi;
@@ -13,12 +13,12 @@ nodejs_env:
 	# 安装 node.js
 	@if [ -d ~/bin ]; then echo ""; else mkdir ~/bin; fi;
 	@if [ -d ~/src ]; then echo ""; else mkdir ~/src; fi;
-	@cd ~/src ; wget https://nodejs.org/dist/v8.11.4/node-v8.11.4.tar.gz
+	@cd ~/src ; wget https://nodejs.org/dist/v8.11.4/node-v8.11.4-linux-x64.tar.xz
 	@if [ -d ~/src ]; then echo ""; else mkdir ~/src; fi;
-	@cd ~/src ; xz -d node-v8.11.4.tar.gz
-	@cd ~/src ; tar xvf node-v8.11.4.tar.gz
-	@cd ~/bin ; ln -s ../src/node-v8.11.4.tar.gz/bin/node node
-	@cd ~/bin ; ln -s ../src/node-v8.11.4.tar.gz/bin/npm npm
+	@cd ~/src ; xz -d node-v8.11.4-linux-x64.tar.xz
+	@cd ~/src ; tar xvJf node-v8.11.4-linux-x64.tar.xz
+	@cd ~/bin ; ln -s ../src/node-v8.11.4-linux-x64.tar.xz/bin/node node
+	@cd ~/bin ; ln -s ../src/node-v8.11.4-linux-x64.tar.xz/bin/npm npm
 	@npm config set prefix ~
 	@npm install -g cnpm --registry=https://registry.npm.taobao.org
 
