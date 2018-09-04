@@ -1,8 +1,8 @@
 module.exports = {
   port   : 9998,
   expired: 60, // 60 秒过期校验
-  key    : 'o4gx5n6330pxy4ojo4gx5n6330pxy4oj', //32位
-  secret : 'pch3gtpxi4urfz5u', //16位
+  key    : 'uGTI6G1gSlq2ePpkRSxQFyS8tC8sh0$n', //32位
+  secret : 'D%R$vYJh0LzZFK4J', //16位
 
   databases: [
     /*

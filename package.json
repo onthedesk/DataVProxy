@@ -12,12 +12,13 @@
     "koa": "~1.2.0",
     "koa-body": "~1.4.0",
     "koa-router": "~5.4.0",
+    "mssql": "3.3.0",
     "mysql": "~2.11.1",
+    "oracledb": "^2.3.0",
     "passthrough-counter": "~1.0.0",
     "query-string-object": "~0.2.2",
     "random-token": "0.0.8",
     "ready": "~0.1.1",
-    "urllib": "~2.9.1",
-    "mssql": "3.3.0"
+    "urllib": "~2.9.1"
   }
 }
