@@ -5,7 +5,8 @@ var drivers = {
   'mysql': require('./mysql'),
   'rds': require('./mysql'),
   'ads': require('./mysql'),
-  'mssql': require('./sqlserver')
+  'mssql': require('./sqlserver'),
+  'oracle': require('./oracle')
 };
 
 var pool = {};
